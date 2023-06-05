@@ -10,7 +10,7 @@ hooks:
   BeforeInstall:
     - location: scripts/before_install.bat
       timeout: 300
-  Install:
+  AfterInstall:
     - location: scripts/install.bat
       timeout: 300
   ApplicationStart:
