@@ -1,3 +1,3 @@
 @echo off
-rm -rf C:\inetpub\wwwroot\LibraryWebApp
-nssm remove LibraryWebApp confirm
+rmdir /S /Q C:\inetpub\wwwroot\LibraryWebApp
+nssm remove LibraryWebApp confirm 2>nul || echo.
