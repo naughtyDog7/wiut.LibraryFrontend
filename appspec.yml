@@ -7,8 +7,11 @@ hooks:
   ApplicationStop:
     - location: scripts/stop_server.bat
       timeout: 300
+  BeforeInstall:
+    - location: scripts/before_install.bat
+      timeout: 300
   Install:
-    - location: scripts/install228.bat
+    - location: scripts/install.bat
       timeout: 300
   ApplicationStart:
     - location: scripts/start_server.bat
