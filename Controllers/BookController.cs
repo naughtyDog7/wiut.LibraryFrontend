@@ -51,7 +51,7 @@ public class BookController : Controller
         return NotFound();
     }
 
-        public async Task<IActionResult> Create()
+    public async Task<IActionResult> Create()
     {
         var response = await _client.GetAsync(UserApiUrl);
         if (response.IsSuccessStatusCode)
@@ -59,7 +59,7 @@ public class BookController : Controller
             var users = JsonConvert.DeserializeObject<List<User>>(await response.Content.ReadAsStringAsync());
             ViewData["UserId"] = new SelectList(users, "Id", "Name");
         }
-        return View();
+        return View(new Book());
     }
     
     [HttpPost]
