@@ -6,6 +6,8 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
+builder.Configuration["ASPNETCORE_URLS"] = "http://*:80";
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
