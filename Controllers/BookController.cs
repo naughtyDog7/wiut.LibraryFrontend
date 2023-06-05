@@ -59,7 +59,7 @@ public class BookController : Controller
             var users = JsonConvert.DeserializeObject<List<User>>(await response.Content.ReadAsStringAsync());
             ViewData["UserId"] = new SelectList(users, "Id", "Name");
         }
-        return View(new Book());
+        return View();
     }
     
     [HttpPost]
